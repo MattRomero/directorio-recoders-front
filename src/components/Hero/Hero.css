@@ -1,0 +1,13 @@
+.hero-home {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+}
+
+.hero-home__display-text {
+    width: 50%;
+}
+
+.hero-home__image {
+    width: 50%;
+}

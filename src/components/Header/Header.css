@@ -1,0 +1,26 @@
+.main-navbar {
+    padding: 10px;
+    width: 100%;
+    top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-navbar__logo { 
+    max-width: 55px;
+}
+
+.main-navbar a {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.main-navbar a.router-link-exact-active {
+    color: #42b983;
+}
+
+@media (min-width: 700px) {
+    .main-navbar__logo { 
+        max-width: unset;
+    }
+}
