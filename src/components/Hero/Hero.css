@@ -6,6 +6,15 @@
 
 .hero-home__display-text {
     width: 50%;
+    color: #CECECE;
+}
+
+.hero-home__display-title {
+    text-transform: uppercase;
+}
+
+.hero-home__display-subtitle {
+    text-transform: uppercase;
 }
 
 .hero-home__image {
