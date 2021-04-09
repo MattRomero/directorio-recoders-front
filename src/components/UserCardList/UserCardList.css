@@ -17,7 +17,7 @@
 @media (min-width: 1200px) {
     .user-list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
         grid-gap: 2%;
         padding: 40px 0;
     }

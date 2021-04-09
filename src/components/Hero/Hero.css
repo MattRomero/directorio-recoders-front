@@ -1,12 +1,16 @@
 .hero-home {
     min-height: calc(100vh - 100px);
     display: flex;
+    flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .hero-home__display-text {
-    width: 50%;
+    width: 100%;
     color: #CECECE;
+    text-align: center;
+    padding: 20px 10px;
 }
 
 .hero-home__display-title {
@@ -17,6 +21,23 @@
     text-transform: uppercase;
 }
 
+.hero-home__image-container {
+    width: 100%;
+}
+
 .hero-home__image {
-    width: 50%;
+    max-width: 100%;
+}
+
+@media (min-width: 991px) {
+    .hero-home {
+        flex-direction: row;
+    }
+    .hero-home__display-text {
+        width: 50%;
+        text-align: left;
+    }
+    .hero-home__image-container {
+        width: 50%;
+    }
 }
