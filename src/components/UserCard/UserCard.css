@@ -2,7 +2,7 @@
     border: 1px solid #909193;
     border-radius: 10px;
     padding: 10px 20px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,6 +15,11 @@
     text-transform: uppercase;
 }
 
+.user-card__skills { 
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 .user-card__button {
     padding: 7px 40px;
     border-radius: 5px;
@@ -25,13 +30,17 @@
 }
 
 .user-card__button--blue {
-    background-color: #1BC5ED;
-    color: #1494B2;
+    background-color: #355389;
+    color: white;
 }
 
 .user-card__button--bottom-centered {
-    transform: translateY(-50%);
     margin: 0 auto;
+    margin-top: auto;
+}
+
+.user-card__description {
+    margin-bottom: 30px;
 }
 
 @media (min-width: 700px) {
@@ -44,8 +53,8 @@
     }
     .user-card {
         width: 80%;
-        display: block;
         height: 100%;
+        align-items: flex-start;
     }
     .user-card__name{ 
         margin-top: 25px;
@@ -53,9 +62,5 @@
     .user-card__avatar {
         margin-top: -40px;
         margin-left: 38%;
-    }
-    .user-card__button--bottom-centered {
-        align-self: center;
-        transform: translate(10%,-50%);
     }
 }

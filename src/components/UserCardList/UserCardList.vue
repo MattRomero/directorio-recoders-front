@@ -2,7 +2,7 @@
     <section>
         <h1>DIRECTORIO<br>RECODERS</h1>
         <div class="user-list">
-            <UserCard v-for="(user,index) in userlist" v-bind:user="user" v-bind:key="user.id"></UserCard>
+            <UserCard v-for="(user) in userlist" v-bind:user="user" v-bind:key="user.id"></UserCard>
         </div>
     </section>
 </template>
