@@ -8,8 +8,7 @@
                     {{skillSets[skill].title}}
                 </span>
             </p>
-            <p class="user-card__description">{{user.description}}</p>
-            <div class="user-card__button user-card__button--blue user-card__button--bottom-centered">
+            <div class="user-card__button user-card__button--blue user-card__button--bottom-centered user-card__button--100w">
                 Linkedin
             </div>
         </div>
@@ -23,12 +22,12 @@ export default {
     name: 'UserCard',
     computed: { 
         skillSets() {
-            return this.$store.getters.getSkillSets;
+            return this.$store.getters.getSkillSetsObjects;
         },
     },
     methods: {
         getStyle(color) {
-            return `color: ${color}; font-weight: bold;`;
+            return `background-color: ${color}; color: white; font-weight: bold; margin-right: 5px; border-radius: 5px; padding: 4px 8px; margin-top: 2px; margin-bottom: 2px; font-size: 13px;`;
         }
     }
 }

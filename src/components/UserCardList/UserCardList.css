@@ -1,3 +1,9 @@
+.user-list__container {
+    max-width: 1300px;
+    width: 100%;
+    padding: 40px 10px;
+}
+
 .user-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
@@ -18,7 +24,7 @@
     .user-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
-        grid-gap: 2%;
+        grid-gap: 3%;
         padding: 40px 0;
     }
 }

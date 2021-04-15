@@ -6,14 +6,18 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     userList: [],
-    skillSets: {},
+    skillSetsObjects: {},
+    filters: {
+      skillSets: null,
+
+    },
   },
   mutations: {
-    getUsers(state, payload) {
+    GET_USERS(state, payload) {
       state.userList = payload
     },
-    getSkillSets(state,payload) {
-      state.skillSets = payload
+    GET_SKILLSETS(state,payload) {
+      state.skillSetsObjects = payload
     }
   },
   actions: {
@@ -21,13 +25,13 @@ export default new Vuex.Store({
       let res = await fetch(`api/users`)
       let users = await res.json()
       shuffleArray(users.users)
-      state.commit('getUsers', users.users)
-      state.commit('getSkillSets', users.skillsets)
+      state.commit('GET_USERS', users.users)
+      state.commit('GET_SKILLSETS', users.skillsets)
     },
   },
   getters: {
     getUserList: state => state.userList,
-    getSkillSets: state => state.skillSets,
+    getSkillSetsObjects: state => state.skillSetsObjects,
   },
   modules: {
   }
