@@ -41,7 +41,12 @@
         border-radius: 5px;
         -webkit-appareance: auto!important;
     }
-    .v-btn--active {
-        filter: brightness(0.6)
+
+    .v-btn-toggle .v-btn {
+        filter: grayscale(1)
+    }
+
+    .v-btn-toggle .v-btn--active {
+        filter: grayscale(0)
     }
 </style>

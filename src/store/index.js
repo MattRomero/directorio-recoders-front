@@ -51,10 +51,17 @@ export default new Vuex.Store({
         if (activeFilters == false) filteredUsers  = users
         activeFilters = true
         filteredUsers = filteredUsers.filter(user => {
-            for (let skillSet of user.skillset) {
+            /* for (let skillSet of user.skillset) {
               if (state.filters.skillSetValue.indexOf(skillSet) > -1) return true
+            } */
+
+            let userMatchesFilters = true
+            for (let skillSet of state.filters.skillSetValue) {
+              if (user.skillset.indexOf(skillSet) == -1) { userMatchesFilters = false }
             }
-        })
+
+            return userMatchesFilters
+          })
       } 
 
       if (activeFilters == false) { filteredUsers  = users }
