@@ -62,7 +62,6 @@ export default new Vuex.Store({
     },
     getSkillSetsObjects: state => state.skillSets.object,
     getSkillSetsForSelect: state => state.skillSets.list,
-
   },
   modules: {
   }

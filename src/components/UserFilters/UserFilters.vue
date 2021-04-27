@@ -3,11 +3,10 @@
         <v-btn-toggle
           v-model="filters.skillSetValue"
           dense
-          background-color="primary"
-          dark
           multiple
+          style="background-color: transparent"
         >
-            <v-btn v-for="skillSet in getSkillSetsForSelect" v-bind:value="skillSet.id" v-bind:key="skillSet.id">
+            <v-btn v-for="skillSet in getSkillSetsForSelect" v-bind:value="skillSet.id" v-bind:key="skillSet.id" :style="getStyle(skillSets[skillSet.id].color)">
                 {{ skillSet.title }}
             </v-btn>
         </v-btn-toggle>
@@ -21,7 +20,15 @@
         name: 'UserFilters',
         computed: {
             ...mapState(['filters']),
-            ...mapGetters(['getSkillSetsForSelect'])
+            ...mapGetters(['getSkillSetsForSelect']),
+            skillSets() {
+                return this.$store.getters.getSkillSetsObjects;
+            },
+        },
+        methods: {
+            getStyle(color) {
+                return `background-color: ${color}; color: white; font-weight: bold; margin-right: 5px; border-radius: 5px; padding: 4px 8px; margin-top: 2px; margin-bottom: 2px; font-size: 13px;`;
+            }
         }
     }
 </script>
@@ -33,5 +40,8 @@
         padding: 10px 20px;
         border-radius: 5px;
         -webkit-appareance: auto!important;
+    }
+    .v-btn--active {
+        filter: brightness(0.6)
     }
 </style>
