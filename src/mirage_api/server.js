@@ -5,31 +5,31 @@ export default function () {
     createServer({
         routes() {
             this.get("/api/users", () => ({
-                skillsets: {
-                    1: {
+                skillsets: [
+                    {
                         id: 1,
                         title: "Front End",
                         color: "#1BC5ED",
                     },
                     
-                    2: {
+                    {
                         id: 2,
                         title: "Back End",
                         color: "#0057FF",
                     },
                     
-                    3: {
+                    {
                         id: 3,
                         title: "UX",
                         color: "#1BC5ED",
                     },
                     
-                    4: {
+                    {
                         id: 4,
                         title: "UI",
                         color: "#FF61F6",
                     }
-                },
+                ],
                 technologies: [
                     {
                         id: 1,

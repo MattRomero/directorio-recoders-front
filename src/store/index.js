@@ -6,10 +6,12 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     userList: [],
-    skillSetsObjects: {},
+    skillSets: {
+      list: [],
+      object: {}
+    },
     filters: {
-      skillSets: null,
-
+      skillSetValue: [],
     },
   },
   mutations: {
@@ -17,21 +19,50 @@ export default new Vuex.Store({
       state.userList = payload
     },
     GET_SKILLSETS(state,payload) {
-      state.skillSetsObjects = payload
-    }
+      state.skillSets = payload
+    },
   },
   actions: {
     async getUsers (state, payload) {
       let res = await fetch(`api/users`)
       let users = await res.json()
       shuffleArray(users.users)
+      
       state.commit('GET_USERS', users.users)
-      state.commit('GET_SKILLSETS', users.skillsets)
+      
+      let skillSets = { list: users.skillsets, object: {} }
+      
+      skillSets.list.forEach((skillSet) => {
+        skillSets.object[skillSet.id] = skillSet
+      })
+      
+      state.commit('GET_SKILLSETS', skillSets)
     },
   },
+  
   getters: {
-    getUserList: state => state.userList,
-    getSkillSetsObjects: state => state.skillSetsObjects,
+    getUserList: state => {
+      let users = state.userList
+
+      let filteredUsers = []
+      let activeFilters = false
+
+      if (state.filters.skillSetValue.length > 0) {
+        if (activeFilters == false) filteredUsers  = users
+        activeFilters = true
+        filteredUsers = filteredUsers.filter(user => {
+            for (let skillSet of user.skillset) {
+              if (state.filters.skillSetValue.indexOf(skillSet) > -1) return true
+            }
+        })
+      } 
+
+      if (activeFilters == false) { filteredUsers  = users }
+      return filteredUsers
+    },
+    getSkillSetsObjects: state => state.skillSets.object,
+    getSkillSetsForSelect: state => state.skillSets.list,
+
   },
   modules: {
   }
