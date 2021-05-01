@@ -1,3 +1,7 @@
+.user-list__user-card-container {
+    width: 100%;
+}
+
 .user-card {
     border: 2px solid #0091CB;
     border-radius: 20px 59px 20px 5px;
@@ -9,7 +13,23 @@
 
 .user-card__header {
     display: flex;
-    margin-bottom: 32px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.user-card__avatar {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.user-card__icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
+    grid-gap: 10px;
+    width: 100%;
 }
 
 .user-card__icon-container > i {
@@ -17,7 +37,7 @@
 }
 
 .user-card__icon-container {
-    margin-bottom: 16px;
+    /* margin-bottom: 16px; */
 }
 
 .user-card__icon-container:last-child {
@@ -35,6 +55,7 @@
 
 .user-card__info {
     margin-bottom: 16px;
+    width: 100%;
 }
 
 .user-card__name{ 
@@ -76,7 +97,6 @@
     padding: 7px 40px;
     border-radius: 5px;
     text-transform: uppercase;
-    font-weight: bold;
     width: fit-content;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
     text-align: center;
@@ -105,7 +125,7 @@
     .user-list__user-card-container {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         padding-bottom: 30px;
     }
@@ -115,6 +135,22 @@
         align-items: flex-start;
         max-width: 260px;
     }
+
+    .user-card__header {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 32px;
+
+    }
+    .user-card__icons {
+        display: block;
+        width: auto;
+    }
+    
+    .user-card__icon-container {
+        margin-bottom: 16px;
+    }
+
     .user-card__avatar {
         margin-top: -42px;
         margin-left: 20%;

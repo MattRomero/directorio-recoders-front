@@ -7,7 +7,7 @@
                         <i :class="[icon.type, 'test']"></i>
                     </div>
                 </div>
-                <img :src="`https://source.unsplash.com/200x200/?cat,dog&id=${user.id}`" class="user-card__avatar" alt="User Image" >
+                <img :src="`https://source.unsplash.com/200x200/?pets&id=${user.id}`" class="user-card__avatar" alt="User Image" >
             </div>
             <div class="user-card__info">
                 <p class="user-card__name">{{user.name}}</p>

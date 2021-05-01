@@ -29,6 +29,8 @@
 
 .hero-home__image-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-home__image {

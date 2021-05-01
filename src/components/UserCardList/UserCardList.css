@@ -29,7 +29,16 @@
     border-bottom: 5px solid #8A61FF;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 450px) {
+    .user-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+        grid-gap: 2%;
+        padding: 40px 0;
+    }
+}
+
+@media (min-width: 850px) {
     .user-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
