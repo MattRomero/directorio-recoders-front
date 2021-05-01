@@ -10,18 +10,21 @@
 
 .hero-home__display-text {
     width: 100%;
-    color: #CECECE;
     text-align: center;
     padding: 20px 10px;
 }
 
 .hero-home__display-title {
     text-transform: uppercase;
-    color: #1BC5ED;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    margin-bottom: 32px;
+    font-size: 36px;
 }
 
 .hero-home__display-subtitle {
-    text-transform: uppercase;
+    color: #717179;
+    font-size: 20px;
 }
 
 .hero-home__image-container {

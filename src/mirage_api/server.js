@@ -8,13 +8,13 @@ export default function () {
                 skillsets: [
                     {
                         id: 1,
-                        title: "Front End",
+                        title: "Front_End",
                         color: "#1BC5ED",
                     },
                     
                     {
                         id: 2,
-                        title: "Back End",
+                        title: "Back_End",
                         color: "#0057FF",
                     },
                     
@@ -55,8 +55,8 @@ export default function () {
                         website: "https://website.com",
                         location: "Santiago",
                         icons: [
-                            { icon: "fab fa-github", link: "https://github.com", name: "Github"},
-                            { icon: "fab fa-behance", link: "https://behance.com", name: "Behance" }
+                            { type: "fab fa-github", link: "https://github.com", name: "Github"},
+                            { type: "fab fa-behance", link: "https://behance.com", name: "Behance" }
                         ]
                     },
                     { 
@@ -67,8 +67,8 @@ export default function () {
                         website: "https://website.com",
                         location: "Santiago",
                         icons: [
-                            { icon: "fab fa-github", link: "https://github.com", name: "Github"},
-                            { icon: "fab fa-behance", link: "https://behance.com", name: "Behance" }
+                            { type: "fab fa-github", link: "https://github.com", name: "Github"},
+                            { type: "fab fa-behance", link: "https://behance.com", name: "Behance" }
                         ]
                     },
                     { 
@@ -79,8 +79,8 @@ export default function () {
                         website: "https://website.com",
                         location: "Santiago",
                         icons: [
-                            { icon: "fab fa-github", link: "https://github.com", name: "Github"},
-                            { icon: "fab fa-behance", link: "https://behance.com", name: "Behance" }
+                            { type: "fab fa-github", link: "https://github.com", name: "Github"},
+                            { type: "fab fa-behance", link: "https://behance.com", name: "Behance" }
                         ]
                     },
                     { 
@@ -91,8 +91,8 @@ export default function () {
                         website: "https://website.com",
                         location: "Santiago",
                         icons: [
-                            { icon: "fab fa-github", link: "https://github.com", name: "Github"},
-                            { icon: "fab fa-behance", link: "https://behance.com", name: "Behance" }
+                            { type: "fab fa-github", link: "https://github.com", name: "Github"},
+                            { type: "fab fa-behance", link: "https://behance.com", name: "Behance" }
                         ]
                     },
                     { 
@@ -103,8 +103,8 @@ export default function () {
                         website: "https://website.com",
                         location: "Santiago",
                         icons: [
-                            { icon: "fab fa-github", link: "https://github.com", name: "Github"},
-                            { icon: "fab fa-behance", link: "https://behance.com", name: "Behance" }
+                            { type: "fab fa-github", link: "https://github.com", name: "Github"},
+                            { type: "fab fa-behance", link: "https://behance.com", name: "Behance" }
                         ]
                     },
                     { 
@@ -115,8 +115,8 @@ export default function () {
                         website: "https://website.com",
                         location: "Santiago",
                         icons: [
-                            { icon: "fab fa-github", link: "https://github.com", name: "Github"},
-                            { icon: "fab fa-behance", link: "https://behance.com", name: "Behance" }
+                            { type: "fab fa-github", link: "https://github.com", name: "Github"},
+                            { type: "fab fa-behance", link: "https://behance.com", name: "Behance" }
                         ]
                     },
                     { 
@@ -127,8 +127,8 @@ export default function () {
                         website: "https://website.com",
                         location: "Santiago",
                         icons: [
-                            { icon: "fab fa-github", link: "https://github.com", name: "Github"},
-                            { icon: "fab fa-behance", link: "https://behance.com", name: "Behance" }
+                            { type: "fab fa-github", link: "https://github.com", name: "Github"},
+                            { type: "fab fa-behance", link: "https://behance.com", name: "Behance" }
                         ]
                     },
                     { 
@@ -139,8 +139,8 @@ export default function () {
                         website: "https://website.com",
                         location: "Santiago",
                         icons: [
-                            { icon: "fab fa-github", link: "https://github.com", name: "Github"},
-                            { icon: "fab fa-behance", link: "https://behance.com", name: "Behance" }
+                            { type: "fab fa-github", link: "https://github.com", name: "Github"},
+                            { type: "fab fa-behance", link: "https://behance.com", name: "Behance" }
                         ]
                     },
                 ],

@@ -11,6 +11,24 @@
     padding: 40px 0;
 }
 
+.user-list__header {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 40px;
+    padding-bottom: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.user-list__header::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 108px;
+    height: 1px;
+    content: " ";
+    border-bottom: 5px solid #8A61FF;
+}
+
 @media (min-width: 700px) {
     .user-list {
         display: grid;
