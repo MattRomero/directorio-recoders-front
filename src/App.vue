@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <header>
-      <Header />
-    </header>
-    <main>
-      <router-view />
-    </main>
+    <v-app>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <router-view />
+      </main>
+    </v-app>
   </div>
 </template>
 

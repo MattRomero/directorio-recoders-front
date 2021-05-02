@@ -1,16 +1,26 @@
 <template>
     <section class="user-filters">
-        <v-btn-toggle
-          v-model="filters.skillSetValue"
-          dense
-          multiple
-          style="background-color: transparent"
-        >
-            <v-btn v-for="skillSet in getSkillSetsForSelect" v-bind:value="skillSet.id" v-bind:key="skillSet.id" :style="getStyle(skillSets[skillSet.id].color)">
-                {{ skillSet.title }}
-            </v-btn>
-        </v-btn-toggle>
-        {{ filters.skillSetValue }}
+        <v-menu class="user-filters__menu-dropdown" offset-y :close-on-click="false" :close-on-content-click="false">
+            <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                    v-bind="attrs"
+                    v-on="on"
+                    id="user-filters__skillset-menu-toggle"
+                >
+                    Perfil profesional  <i class="fas fa-caret-up "></i>
+                </v-btn>
+            </template>
+            <v-btn-toggle
+                v-model="filters.skillSetValue"
+                dense
+                multiple
+                class="user-filters__toggle-btn-container"
+                >
+                <v-btn v-for="skillSet in getSkillSetsForSelect" class="user-filters__toggle-btn" v-bind:value="skillSet.id" v-bind:key="skillSet.id" :style="getStyle(skillSet.id,skillSets[skillSet.id].color)">
+                    {{ skillSet.title }}
+                </v-btn>
+            </v-btn-toggle>
+        </v-menu>
     </section>
 </template>
 
@@ -22,12 +32,13 @@
             ...mapState(['filters']),
             ...mapGetters(['getSkillSetsForSelect']),
             skillSets() {
-                return this.$store.getters.getSkillSetsObjects;
+                return this.$store.getters.getSkillSetsObjects
             },
         },
         methods: {
-            getStyle(color) {
-                return `background-color: ${color}; color: white; font-weight: bold; margin-right: 5px; border-radius: 5px; padding: 4px 8px; margin-top: 2px; margin-bottom: 2px; font-size: 13px;`;
+            getStyle(skillSetId,color) {
+                if (this.$store.state.filters.skillSetValue.indexOf(skillSetId) == -1) return
+                return `background-color: ${color};`
             }
         }
     }

@@ -21,7 +21,7 @@ export default function () {
                     {
                         id: 3,
                         title: "UX",
-                        color: "#1BC5ED",
+                        color: "#A2C400",
                     },
                     
                     {

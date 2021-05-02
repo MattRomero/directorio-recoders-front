@@ -7,7 +7,7 @@
 .user-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    grid-gap: 5%;
+    grid-gap: 20px;
     padding: 40px 0;
 }
 

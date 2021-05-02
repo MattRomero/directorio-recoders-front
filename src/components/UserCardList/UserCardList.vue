@@ -4,17 +4,21 @@
         <div class="user-list">
             <UserCard v-for="(user) in userlist" v-bind:user="user" v-bind:key="user.id"></UserCard>
         </div>
+        <UserInfoModal/>
     </section>
 </template>
 
 <script>
 // @ is an alias to /src
 import UserCard from '@/components/UserCard/UserCard'
+import UserInfoModal from '@/components/UserInfoModal/UserInfoModal'
+
 
 export default {
     name: 'UserCardList',
     components: {
         UserCard,
+        UserInfoModal,
     },
     computed: { 
         userlist() {

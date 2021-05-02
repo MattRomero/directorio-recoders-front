@@ -1,5 +1,13 @@
 .user-list__user-card-container {
     width: 100%;
+    display: flex;
+}
+
+.user-list__user-card-container button {
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .user-card {
