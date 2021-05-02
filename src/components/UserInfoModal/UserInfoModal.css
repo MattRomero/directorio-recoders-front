@@ -8,11 +8,13 @@
 
 .user-info-modal__header {
     display: flex;
+    flex-direction: column-reverse;
     margin-bottom: 16px;
 }
 
 .user-info-modal__general-info {
     flex-grow: 1;
+    padding-right: 20px;
 }
 
 .user-info-modal__name {
@@ -42,5 +44,12 @@
 .user-info-modal__avatar {
     width: 200px;
     height: 200px;
-    border-radius: 50%
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+@media (min-width: 550px) {
+    .user-info-modal__header {
+        flex-direction: row;
+    }
 }
