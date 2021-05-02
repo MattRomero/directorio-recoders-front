@@ -38,6 +38,8 @@
 .user-filters__toggle-btn-container {
     background-color: #E5E5E5;
     padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .user-filters__toggle-btn-container .v-btn.user-filters__toggle-btn.v-btn--has-bg {
